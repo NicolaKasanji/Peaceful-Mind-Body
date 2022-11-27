@@ -159,3 +159,10 @@ footer {
     width: 900px;
 }
 
+/* Pricelist */
+.prices-table {
+    margin: 30px;
+    padding: 50px;
+    border: 5px solid brown;
+}
+
