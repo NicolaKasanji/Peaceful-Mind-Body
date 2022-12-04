@@ -9,7 +9,7 @@ body {
     background-color: rgba(219, 197, 161, 0.6);
 }
 
-/* Navigation */
+/* Nav */
 .nav {
     height: 50px;
     background-color: rgb(60, 46, 46);
@@ -18,39 +18,47 @@ body {
 }
 
 .nav-item {
-    display: inline-block;
-}
-
-.nav-item a {
-    padding: 0 50px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    transition: .3s;
+    display: none;
 }
 
 .nav-item a:hover {
     color: rgb(222, 147, 90);
 }
 
+.burger-menu {
+    display: block;
+    margin-left: auto;
+    padding: 0 30px;
+    font-size: 20px;
+    color: white;
+    line-height: 45px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.burger-menu:hover {
+    color: rgb(222, 147, 90);
+}
+
+
 /* Header */
 .header-img {
     position: relative;
-    height: 360px;
-    background-image: url('../img/woman-gce26f4845_1280.jpg');
+    height: 200px;
+    background-image: url('../img/spa-gecc769c72_1920.jpg');
     background-size: cover;
-    background-position: 0 50%;
+    background-position: 50% 55%;
 }
 
 .header-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(99%, -50%);
-    color:  rgb(60, 46, 46);
-    font-size: 16px;
+    transform: translate(-50%, -55%);
+    color: white;
+    font-size: 13px;
     z-index: 5;
 }
 
@@ -58,24 +66,28 @@ body {
     margin-bottom: 15px;
 }
 
+.header-text h4 {
+    font-size: 18px;
+}
+
 .header-bg {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(239, 234, 234, 0.1);
+    background-color: rgba(85, 52, 52, 0.3);
 }
 
 /* Main */
 main {
     margin: 50px auto;
-    width: 1200px;
 }
 
 main h2 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 22px;
-    margin-top: 65px;
+    font-size: 18px;
+    margin-top: 45px;
+    margin-bottom: -20px;
 }
 
 .about-us-box {
@@ -104,29 +116,44 @@ main h2 {
     padding: 20px 40px;
     bottom: 15px;
     text-align: center;
+    font-size: 14px;
     color: white;
 }
 
 .about-us-text h3 {
     text-transform: uppercase;
     margin-bottom: 12px;
+    font-size: 15px;
 }
 
-.third-text {
-    left: 90px;
-}
-
-.about-us-bg {
+.about-us-shadow {
     position: absolute;
     bottom: 0;
-    height: 28%;
+    height: 40%;
     width: 100%;
     background-color: rgba(35, 27, 27, 0.7);
     border-bottom-right-radius: 20px;
 }
 
-.second-bg {
-    height: 33%;
+.second-shadow {
+    height: 48%;
+}
+
+.third-shadow {
+    height: 44%;
+}
+
+/* Services */
+.services-list {
+    margin: 0 auto;
+    width: 200px;
+}
+
+/* Pricelist */
+.prices-table {
+    margin: 30px;
+    padding: 50px;
+    border: 5px solid brown;
 }
 
 /* Footer */
@@ -153,16 +180,81 @@ footer {
     color: rgb(222, 147, 90);
 }
 
-/* Services */
-.services-list {
-    margin: 0 auto;
-    width: 900px;
+
+@media (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
+    .nav-item {
+        display: inline-block;
+    }
+    .nav-item a {
+        padding: 0 50px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: .3s;
+    }
+    .header-img {
+        position: relative;
+        height: 360px;
+        background-image: url('../img/spa-gecc769c72_1920.jpg');
+        background-size: cover;
+        background-position: 50% 55%;
+    }
+    .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        color: white;
+        font-size: 18px;
+        z-index: 5;
+    }
+    .header-text h4 {
+        font-size: 25px;
+    }
+    .services-list {
+        width: 700px;
+    }
 }
 
-/* Pricelist */
-.prices-table {
-    margin: 30px;
-    padding: 50px;
-    border: 5px solid brown;
+@media (min-width: 670px) {
+    main h2 {
+        font-size: 22px;
+        margin-top: 65px;
+        margin-bottom: 18px;
+    }
+    .about-us-text h3 {
+        font-size: 20px;
+    }
+    .about-us-text {
+        font-size: 17px;
+    }
+    .about-us-shadow {
+        height: 36%;
+    }
 }
-
+@media (min-width: 570px) {
+    .about-us-shadow {
+        height: 36%;
+    } 
+}
+@media (min-width: 460px) {
+     .second-shadow {
+        height: 38%;
+    }
+    .third-shadow {
+        height: 38%;
+    }
+    .services-list {
+        width: 400px;
+    }
+}
+@media (min-width: 1000px) {
+    .services-list {
+        width: 900px;
+    }
+}
